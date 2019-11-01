@@ -1,0 +1,5 @@
+@startuml
+!startsub start_javascript_code
+!define if <color:red>if</color>
+!endsub
+@enduml
