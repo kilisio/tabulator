@@ -44,6 +44,11 @@ CellComponent.prototype.restoreOldValue = function(){
 	this._cell.setValueActual(this._cell.getOldValue());
 };
 
+// reset old value to null
+CellComponent.prototype.reset_old_value = function(){
+	this._cell.reset_old_value();
+};
+
 CellComponent.prototype.edit = function(force){
 	return this._cell.edit(force);
 };
@@ -529,6 +534,11 @@ Cell.prototype.setValueProcessData = function(value, mutate){
 	}
 
 	return changed;
+};
+
+// reset old value to null
+Cell.prototype.reset_old_value = function(){
+	this.oldValue = null;
 };
 
 Cell.prototype.setValueActual = function(value){
